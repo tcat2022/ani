@@ -8,7 +8,6 @@ body{
  background: radial-gradient(rgba(10, 221, 245), rgba(6, 170, 183));
 }
 #container{
-    display: none;
     height: 60vh;
     width: 30vh;
     position: absolute;
@@ -16,14 +15,40 @@ body{
     left: 45vw;
     transform: translate(-50%, -50%);
     perspective: 1000px;
-
 }
 .box{
     height: 250px;
     width: 250px;
     position: absolute;
-    top: 100px;
-    left: 100px;
+    top: 0px;
+    left: 0px;
+    transform-style: preserve-3d;
+    animation: ani 10s infinite;
+}
+.box3{
+    height: 250px;
+    width: 250px;
+    position: absolute;
+    top: 250px;
+    left: 250px;
+    transform-style: preserve-3d;
+    animation: ani 10s infinite;
+}
+.box1{
+    height: 250px;
+    width: 250px;
+    position: absolute;
+    top: 0px;
+    left: 250px;
+    transform-style: preserve-3d;
+    animation: ani 10s infinite;
+}
+.box2{
+    height: 250px;
+    width: 250px;
+    position: absolute;
+    top: 250px;
+    left: 0px;
     transform-style: preserve-3d;
     animation: ani 10s infinite;
 }
@@ -38,21 +63,32 @@ body{
  box-shadow:0px 0px 8px 10px white ;
     background: lightgreen;
 }
+.red{
+    height: 250px;
+    width: 250px;
+    text-align: center;
+    background:lightblue;
+    opacity: .8;
+    color:whitesmoke;
+    padding: 100px 0px;
+    border: 5px solid white;
+    font-size: 60px;
+    box-sizing: border-box;
+    position: absolute;
+    border-radius: 1%;  
+}
 @keyframes ani{
-    0%{
-        transform: rotateX(45deg)  rotateY(-45deg);
-    }
     25%{
-        transform: rotateX(-45deg)  rotateY(-45deg);
+        transform:rotateY(-90deg);
     }
     50%{
-        transform: rotateX(45deg)  rotateY(45deg);
+        transform: rotateX(-180deg) ;
     }
     75%{
-transform:  rotatez(90deg) ;
+transform:  rotateX(90deg) ;
     }
-    100%{
-transform:rotateY(-90deg) rotateZ(-45deg);
+    80%{
+     transform: rotateZ(360deg);
     }
 }
 .card{
@@ -60,7 +96,7 @@ transform:rotateY(-90deg) rotateZ(-45deg);
     width: 250px;
     text-align: center;
     background:lightgreen;
-    opacity: .6;
+    opacity: .8;
     color:whitesmoke;
     padding: 100px 0px;
     border: 5px solid white;
@@ -80,7 +116,7 @@ transform: rotateY(90deg);
  }
 #bottom{
  top: 125px;
-transform: rotateX(90deg);
+transform: rotateX(90deg) rotateX(180deg);
  }   
  #top{
     bottom: 125px;
@@ -90,5 +126,71 @@ transform: rotateX(90deg);
         transform: translateZ(125px);
     }
     #back{
-        transform: translateZ(-125px)  rotateY(180deg);;
+        transform: translateZ(-125px)    rotateX(180deg);
     }
+    #left1{
+        right: 125px;
+        transform: rotateY(-90deg);
+      }
+      #right1{
+  left: 125px;
+        transform: rotateY(90deg);
+     }
+ #bottom1{
+         top: 125px;
+   transform: rotateX(90deg)  rotateX(180deg);
+   }   
+    #top1{
+      bottom: 125px;
+           transform: rotateX(90deg);
+     } 
+            #front1{
+      transform: translateZ(125px);
+            }
+      #back1{
+                transform: translateZ(-125px)   rotateX(180deg);
+           }
+           #left2{
+            right: 125px;
+            transform: rotateY(-90deg);
+          }
+          #right2{
+      left: 125px;
+            transform: rotateY(90deg);
+         }
+     #bottom2{
+             top: 125px;
+       transform: rotateX(90deg)  rotateX(180deg);
+       }   
+        #top2{
+          bottom: 125px;
+               transform: rotateX(90deg);
+         } 
+                #front2{
+          transform: translateZ(125px);
+                }
+          #back2{
+                    transform: translateZ(-125px) rotateX(180deg);
+               }
+               #left3{
+                right: 125px;
+                transform: rotateY(-90deg);
+              }
+              #right3{
+          left: 125px;
+                transform: rotateY(90deg);
+             }
+         #bottom3{
+                 top: 125px;
+           transform: rotateX(90deg)  rotateX(180deg);
+           }   
+            #top3{
+              bottom: 125px;
+                   transform: rotateX(90deg);
+             } 
+                    #front3{
+              transform: translateZ(125px);
+                    }
+              #back3{
+                        transform: translateZ(-125px)  rotateX(180deg);
+                   }               

@@ -1,4 +1,5 @@
-let a = document.getElementById('container');
-function red(){
-a.style.display = "inherit"
+const myTimeout = setTimeout(myGreeting, 10000);
+
+function myGreeting() {
+  document.getElementById("container").style.display = "none"
 }
