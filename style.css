@@ -67,7 +67,7 @@ body{
     height: 250px;
     width: 250px;
     text-align: center;
-    background:lightblue;
+    background:darkolivegreen;
     opacity: .8;
     color:whitesmoke;
     padding: 100px 0px;
@@ -95,7 +95,7 @@ transform:  rotateX(90deg) ;
     height: 250px;
     width: 250px;
     text-align: center;
-    background:lightgreen;
+    background:darkcyan;
     opacity: .8;
     color:whitesmoke;
     padding: 100px 0px;
