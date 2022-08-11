@@ -6,14 +6,15 @@
 }
 body{
     height: 100vh;
- background: radial-gradient(rgba(10, 221, 245), rgba(6, 170, 183));
+ background: 
+  rgb(7, 170, 235);
 }
 #container{
-    height: 60vh;
-    width: 30vh;
+    height: 60%;
+    width: 30%;
     position: absolute;
-    top:45vh;
-    left: 45vw;
+    top:50%;
+    left: 50%;
     transform: translate(-50%, -50%);
     perspective: 1000px;
 }
@@ -58,15 +59,16 @@ body{
     height: 250px;
     width: 250px;
     text-align: center;
-    background:darkkhaki;
-    opacity: .8;
+    background:brown;
+    opacity: .7;
     color:whitesmoke;
     padding: 100px 0px;
     border: 5px solid white;
     font-size: 60px;
     box-sizing: border-box;
     position: absolute;
-    border-radius: 1%;  
+    border-radius: 1%;
+    animation: anie 10s infinite; 
 }
 @keyframes ani{
     25%{
@@ -82,12 +84,40 @@ transform:  rotateX(90deg) ;
      transform: rotateZ(360deg);
     }
 }
+@keyframes anie{
+   0%{
+    background: brown;
+   }
+    25%{
+    background: red;}
+    50%{
+        background: blue;
+    }
+    75%{
+        background: darkgreen;
+    }
+    
+}
+@keyframes anid{
+    0%{
+     background:orange;
+    }
+     25%{
+     background:magenta;}
+     50%{
+         background: aqua;
+     }
+     75%{
+         background: lightgreen;
+     }
+     
+ }
 .card{
     height: 250px;
     width: 250px;
     text-align: center;
-    background:goldenrod;
-    opacity: .8;
+    background:orange;
+    opacity: .7;
     color:whitesmoke;
     padding: 100px 0px;
     border: 5px solid white;
@@ -95,6 +125,7 @@ transform:  rotateX(90deg) ;
     box-sizing: border-box;
     position: absolute;
     border-radius: 1%;
+    animation: anid 10s infinite;
 }
 
 #left{
@@ -184,4 +215,36 @@ transform: rotateX(90deg) rotateX(180deg);
                     }
               #back3{
                         transform: translateZ(-125px)  rotateX(180deg);
-                   }               
+                   }  
+#typer{
+position: relative;
+top: 50%;
+left: 40%;
+width: max-content;
+color: white;
+display:none;
+  }
+  #typer::after,
+  #typer::before{
+    content: '';
+    position: absolute;
+    top: 0%;
+    left: -1%;
+    right: 0%;
+    bottom: 0%;
+  }  
+  #typer::before{
+    background:rgb(7, 170, 235);
+    animation: typewriter 5s steps(18) forwards;
+  }   
+  #typer::after{
+    background: lightgreen;
+    width: 2%;
+    animation: typewriter 5s steps(18) forwards, blinker .75s infinite;
+  }    
+  @keyframes typewriter{
+    to{left: 100%;}
+  }
+  @keyframes blinker{
+    to{opacity: .5;}
+  }
